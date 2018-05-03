@@ -108,6 +108,7 @@ DEVICE_PACKAGE_OVERLAYS := \
     device/lge/hammerhead/overlay
 
 PRODUCT_PACKAGES := \
+    android.hardware.wifi@1.0-service \
     libwpa_client \
     hostapd \
     wificond \
@@ -115,6 +116,7 @@ PRODUCT_PACKAGES := \
     wpa_supplicant.conf
 
 PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl \
     libbt-vendor
 
 # Live Wallpapers
@@ -123,6 +125,10 @@ PRODUCT_PACKAGES += \
     librs_jni
 
 PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.composer@2.1-impl \
+    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.memtrack@1.0-impl \
     gralloc.msm8974 \
     libgenlock \
     hwcomposer.msm8974 \
@@ -140,6 +146,7 @@ PRODUCT_PACKAGES += \
     libOmxVenc
 
 PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
     audio.primary.msm8974 \
     audio.a2dp.default \
     audio.usb.default \
@@ -149,6 +156,7 @@ PRODUCT_PACKAGES += \
 
 # Audio effects
 PRODUCT_PACKAGES += \
+    android.hardware.audio.effect@2.0-impl \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libqcomvoiceprocessingdescriptors \
@@ -160,6 +168,8 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl \
+    camera.device@1.0-impl \
     libqomx_core \
     libmmcamera_interface \
     libmmjpeg_interface \
@@ -169,6 +179,7 @@ PRODUCT_PACKAGES += \
     Snap
 
 PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl \
     keystore.msm8974
 
 # GPS configuration
@@ -177,11 +188,13 @@ PRODUCT_COPY_FILES += \
 
 # GPS
 PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl \
     libgps.utils \
     gps.msm8974
 
 # NFC packages
 PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.0-impl \
     nfc_nci.bcm2079x.default \
     NfcNci \
     Tag
@@ -190,6 +203,7 @@ PRODUCT_PACKAGES += \
     libion
 
 PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-impl \
     lights.hammerhead
 
 PRODUCT_PACKAGES += \
@@ -203,7 +217,26 @@ PRODUCT_PACKAGES += \
     bdAddrLoader
 
 PRODUCT_PACKAGES += \
+    android.hardware.power@1.0-impl \
     power.hammerhead
+
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl
+
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl
+
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
+
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0-impl
+
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
+
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196608
